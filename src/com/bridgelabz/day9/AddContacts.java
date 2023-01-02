@@ -22,8 +22,9 @@ public class AddContacts extends CreateData {
         while (exit == 8) {
             System.out.println("Please enter the following details: ");
             System.out.println("1. Add");
-            System.out.println("2. display");
-            System.out.println("3. Exit");
+            System.out.println("3. Edit");
+            System.out.println("4. display");
+            System.out.println("5. Exit");
 
             CreateData ob4 = new CreateData();
             contacts ob5 = new contacts();
@@ -33,7 +34,20 @@ public class AddContacts extends CreateData {
 
             if (inp == 1) {
                 ob4.Add();
+            }  else if (inp == 3) {
+                System.out.println("Enter the name you want to edit");
+                Scanner in2 = new Scanner(System.in);
+                String sp2 = in2.nextLine();
+
+                if (ob5.FirstName.contains(sp2)) {
+                    int v2 = ob5.FirstName.indexOf(sp2);
+
+                    ob4.Edit(v2);
+                } else {
+                    System.out.println("The name does not exist");
+                }
             }
+
              else if (inp == 4){
 
                 System.out.println("Enter the name you want to display");
