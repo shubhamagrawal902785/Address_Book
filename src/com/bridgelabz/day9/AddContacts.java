@@ -23,7 +23,7 @@ public class AddContacts extends CreateData {
 	            int inp = sc3.nextInt();
 
 	            if (inp == 1) {
-	                ob4.check();
+	              //  ob4.check();
 	                ob4.Create();
 	            } else if (inp == 2) {
 
